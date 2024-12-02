@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RFTtBQQ5n0ax5T439dnlTA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demos.telerik.com/aspnet-ajax/carrental/default.aspx" CVScreenId="8ed51124-4bb9-41a5-86e5-ca6184efe025" CvElementArea="507, 276, 127, 24" CvType="InputBox" DesignTimeRectangle="507, 277, 126, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl aaname=' &amp;#x9;&amp;#x9;&amp;#x9;&amp;#x9;RadDatePicker &amp;#x9;&amp;#x9;&amp;#x9;' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='riTextBox riEnabled' aaname='' /&gt;" Guid="6d5fb05b-a8d4-409c-ad94-5fe2608f6af9" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Car Rental Sample Application for ASP.NET AJAX | Telerik UI for ASP.NET AJAX' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8ed51124-4bb9-41a5-86e5-ca6184efe025" CvTextArea="478, 246, 87, 13" CvTextArgument="Rental Return" CvType="Text" DesignTimeRectangle="478, 246, 87, 13" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl class='title' type='' tag='LI' aaname='                         Rental Return' check:innerText='Rental Return' /&gt;" Guid="278eee9b-abd9-4e70-bbc8-1798ad04ce8f" SearchSteps="FuzzySelector, CV" />
+          <Target CVScreenId="8ed51124-4bb9-41a5-86e5-ca6184efe025" CvTextArea="478, 281, 27, 11" CvTextArgument="Date:" CvType="Text" DesignTimeRectangle="478, 281, 27, 11" ElementType="Text" Guid="32394858-ce21-49e6-825a-98b033f79e74" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1e1d279d9984c23a432c1fc73131ec0d.png" xmlns="">0VxW8ndwE4kKAnvdN6yJjCQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

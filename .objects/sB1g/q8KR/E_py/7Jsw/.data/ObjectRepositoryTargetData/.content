@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="cocLz6lLrUqRoppKRM4hXg" Reference="TL6UdnT9wUaJc1ITW54GJA/7JswYkPd7kGZeMWRv_Y5QQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="screener.in/company/TCS/consolidated" CVScreenId="2b95b92e-6aa3-4cef-a9f9-8bb9865fb2f3" CvTextArea="821, 143, 156, 17" CvTextArgument="Search for a company" CvType="Text" DesignTimeRectangle="775, 134, 250, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' type='search' class='u-full-width' placeholder='Search for a company' aaname='' /&gt;" Guid="572d1aef-f4cf-4c46-a0ed-b2afeeb6faa2" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="50870658948efecf5ee8389dbda87751.png" xmlns="">0aHBXHnewDUqoZONRfqG8dQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

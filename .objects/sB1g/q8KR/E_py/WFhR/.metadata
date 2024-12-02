@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Infosys Ltd",
+  "Type": "Element",
+  "Id": "WFhR_uF7K0K8ddh5JI3GEg",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/WFhR_uF7K0K8ddh5JI3GEg",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/E_pyzy4Lw0Wt1UJjqUzxhw",
+  "Created": "2024-12-02T05:00:01.0745309Z",
+  "Updated": "2024-12-02T05:00:01.0745309Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="JqZR2AX2HEy3xiKzWcEFVg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="screener.in/company/INFY/consolidated" CVScreenId="66818464-84f6-41ac-850a-23935fa6481b" CvTextArea="818, 495, 33, 14" CvType="AnyWordGroup" DesignTimeRectangle="819, 493, 31, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="1976f4ea-5e6f-4843-bf98-948441562832" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="66818464-84f6-41ac-850a-23935fa6481b" CvTextArea="639, 495, 77, 14" CvTextArgument="Face Value" CvType="Text" DesignTimeRectangle="639, 491, 76, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='name' type='' parentid='top-ratios' tag='SPAN' aaname='                Face Value            ' check:innerText='Face Value' /&gt;" Guid="f8cfe28a-8526-4fdd-9b47-5446ed81b0ce" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="78163b9df58ca5916ffec8a6cff6e018.png" xmlns="">0gjhJOKiDjkOb8MHnEkD7Vw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

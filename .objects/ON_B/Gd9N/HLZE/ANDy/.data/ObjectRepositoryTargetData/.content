@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RpAvFG0F1kG-6bV97IM5_g" Reference="TL6UdnT9wUaJc1ITW54GJA/ANDyBABGFEKod8jaV3G5gg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="demos.telerik.com/aspnet-ajax/carrental/default.aspx" CVScreenId="8ed51124-4bb9-41a5-86e5-ca6184efe025" CvElementArea="289, 276, 127, 24" CvType="InputBox" DesignTimeRectangle="289, 276, 126, 24" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='riTextBox riEnabled' aaname='' /&gt;" Guid="2aa91885-77a8-421a-8e6a-4515a12f87a8" IsResponsive="True" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Car Rental Sample Application for ASP.NET AJAX | Telerik UI for ASP.NET AJAX' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8ed51124-4bb9-41a5-86e5-ca6184efe025" CvTextArea="260, 281, 26, 11" CvTextArgument="Date:" CvType="Text" DesignTimeRectangle="260, 281, 27, 11" ElementType="Text" Guid="61e9607b-49d2-4d7d-bd0b-b9c12a2f586b" SearchSteps="CV" TargetType="ComputerVisionBased" />
+          <Target CVScreenId="1711ef6f-728c-4d82-8f64-d3b205ab59df" CvTextArea="260, 246, 93, 16" CvTextArgument="Rental Pick-up" CvType="Text" DesignTimeRectangle="260, 246, 93, 16" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl class='title' tag='LI' type='' aaname='                         Rental Pick-up' check:innerText='Rental Pick-up' /&gt;" Guid="217b4131-589f-4c95-acaa-6ec13e7f76ab" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a5a40fd0ed4ab37f0cfdefebb9494c76.png" xmlns="">0EBhS_Opi-0CxhISSwVYzsg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

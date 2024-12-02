@@ -1,0 +1,14 @@
+﻿{
+  "Name": "High  Low",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "AmtiNkfTj0qxvovzeR4snA",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/AmtiNkfTj0qxvovzeR4snA",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/E_pyzy4Lw0Wt1UJjqUzxhw",
+  "Created": "2024-12-02T05:01:42.522717Z",
+  "Updated": "2024-12-02T05:01:42.522717Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

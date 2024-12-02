@@ -1,0 +1,14 @@
+﻿{
+  "Name": "INFY",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "7JswYkPd7kGZeMWRv_Y5QQ",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/7JswYkPd7kGZeMWRv_Y5QQ",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/E_pyzy4Lw0Wt1UJjqUzxhw",
+  "Created": "2024-12-02T04:51:27.4797445Z",
+  "Updated": "2024-12-02T04:51:27.4797445Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

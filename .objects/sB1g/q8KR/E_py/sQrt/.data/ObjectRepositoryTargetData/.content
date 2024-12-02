@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="JlWlELe3b0K5yKItspu2VQ" Reference="TL6UdnT9wUaJc1ITW54GJA/sQrtTfMYw0uB4uv3DFjS_Q" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="screener.in/company/FSL/consolidated" CVScreenId="d63a361d-b06a-4d12-b938-f99f4f97ea90" CvTextArea="825, 400, 26, 14" CvType="AnyWordGroup" DesignTimeRectangle="826, 398, 24, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="2e990587-564d-4924-b56e-d83672e470a5" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Firstsource Solutions Ltd share price | About Firstsour.Solu. | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="d63a361d-b06a-4d12-b938-f99f4f97ea90" CvTextArea="801, 447, 50, 14" CvTextArgument="0.94 %" CvType="Text" DesignTimeRectangle="802, 443, 48, 24" FuzzySelectorArgument="&lt;webctrl type='' class='nowrap value' parentid='top-ratios' tag='SPAN' aaname='                                      %                ' check:innerText='0.94 %' /&gt;" Guid="4fa44c88-dea7-428d-8d26-3238c49d1681" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="1310299399361053d173a52367391594.png" xmlns="">02yMkgTsxxU2HAcghMvVkMw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

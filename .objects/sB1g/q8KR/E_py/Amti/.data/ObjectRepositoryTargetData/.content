@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="RNuCxbhHtU2ZNloeEk7Nrg" Reference="TL6UdnT9wUaJc1ITW54GJA/AmtiNkfTj0qxvovzeR4snA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="screener.in/company/TCS/consolidated" CVScreenId="8e946764-18d5-41a3-9104-c853b92a77d6" CvTextArea="639, 400, 212, 17" CvType="AnyWordGroup" DesignTimeRectangle="627, 384, 235, 47" DesignTimeScaleFactor="1" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl type='' parentid='top-ratios' tag='LI' class='flex flex-space-between' aaname='                          ' /&gt;" Guid="ab98c6c1-bbc1-463a-9a62-3518a9c71b49" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="8e946764-18d5-41a3-9104-c853b92a77d6" CvTextArea="639, 447, 100, 14" CvTextArgument="Dividend Yield" CvType="Text" DesignTimeRectangle="639, 443, 100, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='name' type='' parentid='top-ratios' tag='SPAN' aaname='                Dividend Yield            ' check:innerText='Dividend Yield' /&gt;" Guid="628e53e8-23b9-441c-bf48-2cbff16f8fe2" SearchSteps="FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="de1250d62a26842c7180c046533978a4.png" xmlns="">0vvM_a37Zd0iIaQ0UFNCDHQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Stock Screener and fundamental analysis ",
+  "Type": "Screen",
+  "Id": "E_pyzy4Lw0Wt1UJjqUzxhw",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/E_pyzy4Lw0Wt1UJjqUzxhw",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/q8KRM4qy3Eyf0de1ajywuw",
+  "Created": "2024-12-02T04:51:00.7106649Z",
+  "Updated": "2024-12-02T04:51:00.7106649Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

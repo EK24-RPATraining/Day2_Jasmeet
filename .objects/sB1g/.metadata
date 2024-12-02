@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge Stock Screener and fundamental analysis tool for Indian stocks - Screener",
+  "Type": "App",
+  "Id": "sB1gPC5ZrUuZBkii2ZUFUw",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/sB1gPC5ZrUuZBkii2ZUFUw",
+  "Created": "2024-12-02T04:51:00.6919811Z",
+  "Updated": "2024-12-02T04:51:00.6919811Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

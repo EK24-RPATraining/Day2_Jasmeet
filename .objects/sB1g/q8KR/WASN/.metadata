@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Tata Consultancy Services Ltd share pric",
+  "Type": "Screen",
+  "Id": "WASND6Ab5k6QMuyFo8-boQ",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/WASND6Ab5k6QMuyFo8-boQ",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/q8KRM4qy3Eyf0de1ajywuw",
+  "Created": "2024-12-02T05:17:52.9550708Z",
+  "Updated": "2024-12-02T05:17:52.9550708Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

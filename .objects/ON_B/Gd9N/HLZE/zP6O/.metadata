@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Time",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "zP6Obl0_vUqHJlL2503JCQ",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/zP6Obl0_vUqHJlL2503JCQ",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/HLZEerGbJ0GQCDQwRAKOrA",
+  "Created": "2024-12-01T17:32:10.4718781Z",
+  "Updated": "2024-12-01T17:32:10.4718781Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

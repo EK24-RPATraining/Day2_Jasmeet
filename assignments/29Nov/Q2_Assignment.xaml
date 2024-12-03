@@ -92,7 +92,7 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Q2_Assignment" sap:VirtualizedContainerService.HintSize="706,1690" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="⦁ From the attached excel file [Assignment_Dataset.xlsx], fetch only the records whose Age is more than 40 and less than 50. Write it in a new excel file [1] using Workbook activities. &#xD;&#xA;⦁ From the newly created excel file [1], Display the Last Name of the 4th data row in message box using excel activities &#xD;&#xA;⦁ In the newly created excel file [1], Replace\Write the First Name of the 3rd data row with your name using workbook activities. &#xD;&#xA;" DisplayName="Q2_Assignment" sap:VirtualizedContainerService.HintSize="706,1935" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_input" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_filterAge" />
@@ -108,10 +108,11 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_input]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="570,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Test Data" WorkbookPath="assignments\29Nov\Input\Assignment_DataSet.xlsx" />
-    <ui:FilterDataTable DataTable="[dt_input]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="570,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_filterAge]" SelectColumnsMode="Remove">
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_input]" DisplayName="Read Range Workbook assignment" sap:VirtualizedContainerService.HintSize="570,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Test Data" WorkbookPath="assignments\29Nov\Input\Assignment_DataSet.xlsx" />
+    <ui:FilterDataTable DataTable="[dt_input]" DisplayName="Filter by age" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="570,193" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[dt_filterAge]" SelectColumnsMode="Remove">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="LT">
@@ -138,8 +139,9 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_filterAge]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="570,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="FilterAge" WorkbookPath="assignments\29Nov\output\Assignment_Data_FilterAge.xlsx" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[dt_filterAge]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="570,1206" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_filterAge]" DisplayName="Write Range Workbook filterAge" sap:VirtualizedContainerService.HintSize="570,148" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="FilterAge" WorkbookPath="assignments\29Nov\output\Assignment_Data_FilterAge.xlsx" />
+    <ui:LogMessage DisplayName="Log entering for each" sap:VirtualizedContainerService.HintSize="570,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;entering for each&quot;]" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[dt_filterAge]" DisplayName="For Each Row in Data Table filterAge" sap:VirtualizedContainerService.HintSize="570,1206" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
@@ -151,7 +153,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <If Condition="[index=3]" sap:VirtualizedContainerService.HintSize="502,427" sap2010:WorkflowViewState.IdRef="If_1">
+            <If Condition="[index=3]" DisplayName="If 4th row" sap:VirtualizedContainerService.HintSize="502,427" sap2010:WorkflowViewState.IdRef="If_1">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="Sequence_3">
                   <sap:WorkflowViewStateService.ViewState>
@@ -159,7 +161,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[String.Format(&quot;lastname of 4th data row is {0}&quot;,CurrentRow(&quot;Last Name&quot;))]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="display lastname of 4th row" sap:VirtualizedContainerService.HintSize="382,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[String.Format(&quot;lastname of 4th data row is {0}&quot;,CurrentRow(&quot;Last Name&quot;))]" />
                 </Sequence>
               </If.Then>
               <If.Else>
@@ -172,7 +174,7 @@
                 </Sequence>
               </If.Else>
             </If>
-            <If Condition="[index=2]" sap:VirtualizedContainerService.HintSize="502,532" sap2010:WorkflowViewState.IdRef="If_2">
+            <If Condition="[index=2]" DisplayName="If 3rd row" sap:VirtualizedContainerService.HintSize="502,532" sap2010:WorkflowViewState.IdRef="If_2">
               <If.Then>
                 <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,282" sap2010:WorkflowViewState.IdRef="Sequence_4">
                   <sap:WorkflowViewStateService.ViewState>
@@ -180,7 +182,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
+                  <Assign DisplayName="Assign my name to 3rd row" sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_1">
                     <Assign.To>
                       <OutArgument x:TypeArguments="x:Object">[CurrentRow("First Name")]</OutArgument>
                     </Assign.To>
@@ -188,7 +190,7 @@
                       <InArgument x:TypeArguments="x:Object">["Jasmeet"]</InArgument>
                     </Assign.Value>
                   </Assign>
-                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[CurrentRow(&quot;First Name&quot;)]" />
+                  <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="display first name of 3rd row" sap:VirtualizedContainerService.HintSize="434,108" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[CurrentRow(&quot;First Name&quot;)]" />
                 </Sequence>
               </If.Then>
               <If.Else>

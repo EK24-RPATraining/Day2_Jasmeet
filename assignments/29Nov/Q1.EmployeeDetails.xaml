@@ -94,7 +94,6 @@
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="EmployeeDetails" sap:VirtualizedContainerService.HintSize="706,2016" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="sd:DataTable" Default="[new DataTable]" Name="dt_Report" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_input" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Filtered" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_FilteredAge" />

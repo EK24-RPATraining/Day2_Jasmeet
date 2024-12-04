@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Q6_CompanyData" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Q6_CompanyData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Q6_CompanyData" VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Q6_CompanyData_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:uue="clr-namespace:UiPath.UIAutomationNext.Exceptions;assembly=UiPath.UIAutomationNext" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -47,6 +47,8 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
       <x:String>System.Numerics</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.UIAutomationNext.Exceptions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -111,21 +113,22 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Screener:&#xD;&#xA;⦁ Go to URL: https://www.screener.in/&#xD;&#xA;⦁ For the company ids provided in the attached Excel generate an output file with the following fields. &#xD;&#xA;                   Company Name, High, Low, Face Value&#xD;&#xA;⦁ Save the output in an excel file" DisplayName="Q6_CompanyData" sap:VirtualizedContainerService.HintSize="706,2645" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Screener:&#xA;⦁ Go to URL: https://www.screener.in/&#xA;⦁ For the company ids provided in the attached Excel generate an output file with the following fields. &#xA;                   Company Name, High, Low, Face Value&#xA;⦁ Save the output in an excel file" DisplayName="Q6_CompanyData" sap:VirtualizedContainerService.HintSize="706,940" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_new" />
       <Variable x:TypeArguments="sd:DataTable" Name="dt_Screener" />
       <Variable x:TypeArguments="x:String" Name="CompanyName" />
       <Variable x:TypeArguments="x:String" Name="High" />
-      <Variable x:TypeArguments="x:String" Name="Low" />
+      <Variable x:TypeArguments="x:String" Name="Low">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
+      </Variable>
       <Variable x:TypeArguments="x:String" Name="FaceValue" />
-      <Variable x:TypeArguments="x:Int32" Name="index">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:String x:Key="SourceIdRef">ForEachRow_3</x:String>
-            <x:String x:Key="SourcePropertyName">CurrentIndex</x:String>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
+      <Variable x:TypeArguments="x:String" Name="HighLow">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String" Value="" />
+        </Variable.Default>
       </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -134,133 +137,211 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_Screener]" DisplayName="Read Range Workbook screener" sap:VirtualizedContainerService.HintSize="615,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Screener" WorkbookPath="assignments\29Nov\Input\Input_Screener.xlsx" />
-    <ui:BuildDataTable DataTable="[dt_new]" DisplayName="Build Data Table output" sap:VirtualizedContainerService.HintSize="615,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;CompanyName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;FaceValue&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
-    <ui:LogMessage DisplayName="Log Message entering browser" sap:VirtualizedContainerService.HintSize="615,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;entering browser&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Tata Consultancy Services Ltd share pric" sap:VirtualizedContainerService.HintSize="615,2026" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="5160946d-e064-4916-816e-955dcb088a51" Version="V2">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
-          <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
-          </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="581,1777" sap2010:WorkflowViewState.IdRef="Sequence_8">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="[index]" DataTable="[dt_Screener]" DisplayName="For Each Row in Data Table dt-screener" sap:VirtualizedContainerService.HintSize="547,1715" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
-              <ui:ForEachRow.Body>
-                <ActivityAction x:TypeArguments="sd:DataRow">
-                  <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
-                  </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,1526" sap2010:WorkflowViewState.IdRef="Sequence_9">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="x:String" Name="HighLow" />
-                    </Sequence.Variables>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INFY'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString]" Version="V4">
-                      <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="screener.in/company/TCS/consolidated" CVScreenId="2b95b92e-6aa3-4cef-a9f9-8bb9865fb2f3" ContentHash="cocLz6lLrUqRoppKRM4hXg" CvTextArea="821, 143, 156, 17" CvTextArgument="Search for a company" CvType="Text" DesignTimeRectangle="775, 134, 250, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' type='search' class='u-full-width' placeholder='Search for a company' aaname='' /&gt;" Guid="572d1aef-f4cf-4c46-a0ed-b2afeeb6faa2" InformativeScreenshot="50870658948efecf5ee8389dbda87751.png" Reference="TL6UdnT9wUaJc1ITW54GJA/7JswYkPd7kGZeMWRv_Y5QQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                      </uix:NTypeInto.Target>
-                      <uix:NTypeInto.VerifyOptions>
-                        <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
-                          <uix:VerifyExecutionTypeIntoOptions.Retry>
-                            <InArgument x:TypeArguments="x:Boolean" />
-                          </uix:VerifyExecutionTypeIntoOptions.Retry>
-                          <uix:VerifyExecutionTypeIntoOptions.Timeout>
-                            <InArgument x:TypeArguments="x:Double" />
-                          </uix:VerifyExecutionTypeIntoOptions.Timeout>
-                        </uix:VerifyExecutionTypeIntoOptions>
-                      </uix:NTypeInto.VerifyOptions>
-                      <sap:WorkflowViewStateService.ViewState>
-                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                        </scg:Dictionary>
-                      </sap:WorkflowViewStateService.ViewState>
-                    </uix:NTypeInto>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Infosys Ltd'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" Version="V4">
-                      <uix:NClick.Target>
-                        <uix:TargetAnchorable BrowserURL="screener.in/company/TCS/consolidated" CVScreenId="aaed1528-9211-4911-91df-21751e3baed8" ContentHash="bwnDn-IdXkSsWyvoZ3qcrA" CvTextArea="791, 184, 74, 17" CvType="AnyWordGroup" DesignTimeRectangle="776, 177, 179, 30" DesignTimeScaleFactor="1" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl parentid='desktop-search' tag='LI' type='' class='active' /&gt;" Guid="75e12fa4-a2ab-4369-ae34-9ab5a0ed41de" InformativeScreenshot="887cc2bed0681ee2053b3a165c5aecc2.png" Reference="TL6UdnT9wUaJc1ITW54GJA/WFhR_uF7K0K8ddh5JI3GEg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                      </uix:NClick.Target>
-                      <uix:NClick.VerifyOptions>
-                        <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
-                          <uix:VerifyExecutionOptions.Retry>
-                            <InArgument x:TypeArguments="x:Boolean" />
-                          </uix:VerifyExecutionOptions.Retry>
-                          <uix:VerifyExecutionOptions.Timeout>
-                            <InArgument x:TypeArguments="x:Double" />
-                          </uix:VerifyExecutionOptions.Timeout>
-                        </uix:VerifyExecutionOptions>
-                      </uix:NClick.VerifyOptions>
-                    </uix:NClick>
-                    <uix:NGetText DisplayName="Get Text 'Infosys Ltd(1)'" sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" TextString="[CompanyName]" Version="V4">
-                      <uix:NGetText.Target>
-                        <uix:TargetAnchorable BrowserURL="screener.in/company/INFY/consolidated" CVScreenId="66818464-84f6-41ac-850a-23935fa6481b" ContentHash="z7cCk4joWUy4xJCjJgPKfw" CvTextArea="84, 269, 201, 41" CvType="AnyWordGroup" DesignTimeRectangle="84, 262, 200, 49" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='top' tag='H1' type='' class='margin-0 show-from-tablet-landscape' /&gt;" Guid="dee4f665-0290-4439-8055-ce9312381b8e" InformativeScreenshot="5e2d81bbaf25ddd3e8de60b6612be730.png" Reference="TL6UdnT9wUaJc1ITW54GJA/7faD-ytf6U2SVZaoOe3-ZQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
-                      </uix:NGetText.Target>
-                    </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Text 'High / Low'" sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" TextString="[HighLow]" Version="V4">
-                      <uix:NGetText.Target>
-                        <uix:TargetAnchorable BrowserURL="screener.in/company/TCS/consolidated" CVScreenId="8e946764-18d5-41a3-9104-c853b92a77d6" ContentHash="RNuCxbhHtU2ZNloeEk7Nrg" CvTextArea="639, 400, 212, 17" CvType="AnyWordGroup" DesignTimeRectangle="627, 384, 235, 47" DesignTimeScaleFactor="1" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl type='' parentid='top-ratios' tag='LI' class='flex flex-space-between' aaname='                          ' /&gt;" Guid="ab98c6c1-bbc1-463a-9a62-3518a9c71b49" InformativeScreenshot="de1250d62a26842c7180c046533978a4.png" Reference="TL6UdnT9wUaJc1ITW54GJA/AmtiNkfTj0qxvovzeR4snA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                          <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target CVScreenId="8e946764-18d5-41a3-9104-c853b92a77d6" CvTextArea="639, 447, 100, 14" CvTextArgument="Dividend Yield" CvType="Text" DesignTimeRectangle="639, 443, 100, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='name' type='' parentid='top-ratios' tag='SPAN' aaname='                Dividend Yield            ' check:innerText='Dividend Yield' /&gt;" Guid="628e53e8-23b9-441c-bf48-2cbff16f8fe2" SearchSteps="FuzzySelector, CV" />
+    <ui:ReadRange Range="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_Screener]" DisplayName="Read Range Workbook screener" sap:VirtualizedContainerService.HintSize="434,120" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Screener" WorkbookPath="assignments\29Nov\Input\Input_Screener.xlsx" />
+    <ui:BuildDataTable DataTable="[dt_new]" DisplayName="Build Data Table output" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="BuildDataTable_1" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;CompanyName&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;High&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Low&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;FaceValue&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;  &lt;TableName /&gt;&#xA;&lt;/NewDataSet&gt;" />
+    <ui:LogMessage DisplayName="Log Message entering browser" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Trace" Message="[&quot;entering browser&quot;]" />
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="653,2828" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Edge Tata Consultancy Services Ltd share pric" sap:VirtualizedContainerService.HintSize="615,2578" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" InteractionMode="DebuggerApi" ScopeGuid="5160946d-e064-4916-816e-955dcb088a51" Version="V2">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="581,2361" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[dt_Screener]" DisplayName="For Each Row in Data Table dt-screener" sap:VirtualizedContainerService.HintSize="547,2299" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+                  <ui:ForEachRow.Body>
+                    <ActivityAction x:TypeArguments="sd:DataRow">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513,2112" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INFY'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="479,286" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" Text="[CurrentRow(&quot;CompanyCode&quot;).ToString]" Version="V4">
+                          <uix:NTypeInto.Target>
+                            <uix:TargetAnchorable BrowserURL="screener.in/company/TCS/consolidated" CVScreenId="2b95b92e-6aa3-4cef-a9f9-8bb9865fb2f3" ContentHash="cocLz6lLrUqRoppKRM4hXg" CvTextArea="821, 143, 156, 17" CvTextArgument="Search for a company" CvType="Text" DesignTimeRectangle="775, 134, 250, 34" DesignTimeScaleFactor="1" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl parentid='desktop-search' tag='INPUT' type='search' class='u-full-width' placeholder='Search for a company' aaname='' /&gt;" Guid="572d1aef-f4cf-4c46-a0ed-b2afeeb6faa2" InformativeScreenshot="50870658948efecf5ee8389dbda87751.png" Reference="TL6UdnT9wUaJc1ITW54GJA/7JswYkPd7kGZeMWRv_Y5QQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NTypeInto.Target>
+                          <uix:NTypeInto.VerifyOptions>
+                            <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionTypeIntoOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionTypeIntoOptions.Retry>
+                              <uix:VerifyExecutionTypeIntoOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionTypeIntoOptions.Timeout>
+                            </uix:VerifyExecutionTypeIntoOptions>
+                          </uix:NTypeInto.VerifyOptions>
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </uix:NTypeInto>
+                        <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Infosys Ltd'" sap:VirtualizedContainerService.HintSize="479,225" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" Version="V4">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable BrowserURL="screener.in/company/TCS/consolidated" CVScreenId="aaed1528-9211-4911-91df-21751e3baed8" ContentHash="bwnDn-IdXkSsWyvoZ3qcrA" CvTextArea="791, 184, 74, 17" CvType="AnyWordGroup" DesignTimeRectangle="776, 177, 179, 30" DesignTimeScaleFactor="1" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl parentid='desktop-search' tag='LI' type='' class='active' /&gt;" Guid="75e12fa4-a2ab-4369-ae34-9ab5a0ed41de" InformativeScreenshot="887cc2bed0681ee2053b3a165c5aecc2.png" Reference="TL6UdnT9wUaJc1ITW54GJA/WFhR_uF7K0K8ddh5JI3GEg" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NClick.Target>
+                          <uix:NClick.VerifyOptions>
+                            <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                              <uix:VerifyExecutionOptions.Retry>
+                                <InArgument x:TypeArguments="x:Boolean" />
+                              </uix:VerifyExecutionOptions.Retry>
+                              <uix:VerifyExecutionOptions.Timeout>
+                                <InArgument x:TypeArguments="x:Double" />
+                              </uix:VerifyExecutionOptions.Timeout>
+                            </uix:VerifyExecutionOptions>
+                          </uix:NClick.VerifyOptions>
+                        </uix:NClick>
+                        <uix:NGetText DisplayName="Get Text 'Infosys Ltd(1)'" sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" TextString="[CompanyName]" Version="V4">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable BrowserURL="screener.in/company/INFY/consolidated" CVScreenId="66818464-84f6-41ac-850a-23935fa6481b" ContentHash="z7cCk4joWUy4xJCjJgPKfw" CvTextArea="84, 269, 201, 41" CvType="AnyWordGroup" DesignTimeRectangle="84, 262, 200, 49" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl parentid='top' tag='H1' type='' class='margin-0 show-from-tablet-landscape' /&gt;" Guid="dee4f665-0290-4439-8055-ce9312381b8e" InformativeScreenshot="5e2d81bbaf25ddd3e8de60b6612be730.png" Reference="TL6UdnT9wUaJc1ITW54GJA/7faD-ytf6U2SVZaoOe3-ZQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="479,547" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                          <TryCatch.Try>
+                            <uix:NGetText DisplayName="Get Text 'High / Low'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NGetText_11" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" TextString="[HighLow]" Version="V4">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="screener.in/company/TCS/consolidated" CVScreenId="8e946764-18d5-41a3-9104-c853b92a77d6" ContentHash="RNuCxbhHtU2ZNloeEk7Nrg" CvTextArea="639, 400, 212, 17" CvType="AnyWordGroup" DesignTimeRectangle="627, 384, 235, 47" DesignTimeScaleFactor="1" ElementType="ListItem" FuzzySelectorArgument="&lt;webctrl type='' parentid='top-ratios' tag='LI' class='flex flex-space-between' aaname='                          ' /&gt;" Guid="ab98c6c1-bbc1-463a-9a62-3518a9c71b49" InformativeScreenshot="de1250d62a26842c7180c046533978a4.png" Reference="TL6UdnT9wUaJc1ITW54GJA/AmtiNkfTj0qxvovzeR4snA" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="8e946764-18d5-41a3-9104-c853b92a77d6" CvTextArea="639, 447, 100, 14" CvTextArgument="Dividend Yield" CvType="Text" DesignTimeRectangle="639, 443, 100, 24" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='name' type='' parentid='top-ratios' tag='SPAN' aaname='                Dividend Yield            ' check:innerText='Dividend Yield' /&gt;" Guid="628e53e8-23b9-441c-bf48-2cbff16f8fe2" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                          </TryCatch.Try>
+                          <TryCatch.Catches>
+                            <Catch x:TypeArguments="uue:UiAutomationException" sap:VirtualizedContainerService.HintSize="422,353" sap2010:WorkflowViewState.IdRef="Catch`1_3">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ActivityAction x:TypeArguments="uue:UiAutomationException">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="uue:UiAutomationException" Name="exception" />
+                                </ActivityAction.Argument>
+                                <Sequence sap:VirtualizedContainerService.HintSize="416,283" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Warn" Message="[&quot;high error&quot;]" />
+                                  <ui:Continue sap:VirtualizedContainerService.HintSize="382,48" sap2010:WorkflowViewState.IdRef="Continue_1" />
+                                </Sequence>
+                              </ActivityAction>
+                            </Catch>
+                          </TryCatch.Catches>
+                        </TryCatch>
+                        <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="479,417" sap2010:WorkflowViewState.IdRef="TryCatch_4">
+                          <TryCatch.Try>
+                            <uix:NGetText DisplayName="Get Text 'Face Value'" sap:VirtualizedContainerService.HintSize="334,157" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" TextString="[FaceValue]" Version="V4">
+                              <uix:NGetText.Target>
+                                <uix:TargetAnchorable BrowserURL="screener.in/company/INFY/consolidated" CVScreenId="66818464-84f6-41ac-850a-23935fa6481b" ContentHash="JqZR2AX2HEy3xiKzWcEFVg" CvTextArea="818, 495, 33, 14" CvType="AnyWordGroup" DesignTimeRectangle="819, 493, 31, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="1976f4ea-5e6f-4843-bf98-948441562832" InformativeScreenshot="78163b9df58ca5916ffec8a6cff6e018.png" Reference="TL6UdnT9wUaJc1ITW54GJA/SGCcDXQG-kuernuQUG4ZxQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                                  <uix:TargetAnchorable.Anchors>
+                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                      <uix:Target CVScreenId="66818464-84f6-41ac-850a-23935fa6481b" CvTextArea="639, 495, 77, 14" CvTextArgument="Face Value" CvType="Text" DesignTimeRectangle="639, 491, 76, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='name' type='' parentid='top-ratios' tag='SPAN' aaname='                Face Value            ' check:innerText='Face Value' /&gt;" Guid="f8cfe28a-8526-4fdd-9b47-5446ed81b0ce" SearchSteps="FuzzySelector, CV" />
+                                    </scg:List>
+                                  </uix:TargetAnchorable.Anchors>
+                                </uix:TargetAnchorable>
+                              </uix:NGetText.Target>
+                            </uix:NGetText>
+                          </TryCatch.Try>
+                          <TryCatch.Catches>
+                            <Catch x:TypeArguments="uue:UiAutomationException" sap:VirtualizedContainerService.HintSize="404,22" sap2010:WorkflowViewState.IdRef="Catch`1_4">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                              <ActivityAction x:TypeArguments="uue:UiAutomationException">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="uue:UiAutomationException" Name="exception" />
+                                </ActivityAction.Argument>
+                                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,143" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Warn" Message="[&quot;face value error&quot;]" />
+                              </ActivityAction>
+                            </Catch>
+                          </TryCatch.Catches>
+                        </TryCatch>
+                        <ui:MultipleAssign DisplayName="Multiple Assign high/ low" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+                          <ui:MultipleAssign.AssignOperations>
+                            <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[High]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">[HighLow.Split("₹")(1).Split("/")(0)]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
+                              <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
+                                <ui:AssignOperation.To>
+                                  <OutArgument x:TypeArguments="x:String">[Low]</OutArgument>
+                                </ui:AssignOperation.To>
+                                <ui:AssignOperation.Value>
+                                  <InArgument x:TypeArguments="x:String">[HighLow.Split("₹")(1).Split("/")(1)]</InArgument>
+                                </ui:AssignOperation.Value>
+                              </ui:AssignOperation>
                             </scg:List>
-                          </uix:TargetAnchorable.Anchors>
-                        </uix:TargetAnchorable>
-                      </uix:NGetText.Target>
-                    </uix:NGetText>
-                    <uix:NGetText DisplayName="Get Text 'Face Value'" sap:VirtualizedContainerService.HintSize="479,189" sap2010:WorkflowViewState.IdRef="NGetText_13" ScopeIdentifier="5160946d-e064-4916-816e-955dcb088a51" TextString="[FaceValue]" Version="V4">
-                      <uix:NGetText.Target>
-                        <uix:TargetAnchorable BrowserURL="screener.in/company/INFY/consolidated" CVScreenId="66818464-84f6-41ac-850a-23935fa6481b" ContentHash="JqZR2AX2HEy3xiKzWcEFVg" CvTextArea="818, 495, 33, 14" CvType="AnyWordGroup" DesignTimeRectangle="819, 493, 31, 19" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='number' parentid='top-ratios' tag='SPAN' type='' /&gt;" Guid="1976f4ea-5e6f-4843-bf98-948441562832" InformativeScreenshot="78163b9df58ca5916ffec8a6cff6e018.png" Reference="TL6UdnT9wUaJc1ITW54GJA/SGCcDXQG-kuernuQUG4ZxQ" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Infosys Ltd share price | About Infosys | Key Insights - Screener' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
-                          <uix:TargetAnchorable.Anchors>
-                            <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target CVScreenId="66818464-84f6-41ac-850a-23935fa6481b" CvTextArea="639, 495, 77, 14" CvTextArgument="Face Value" CvType="Text" DesignTimeRectangle="639, 491, 76, 23" ElementType="Text" FuzzySelectorArgument="&lt;webctrl class='name' type='' parentid='top-ratios' tag='SPAN' aaname='                Face Value            ' check:innerText='Face Value' /&gt;" Guid="f8cfe28a-8526-4fdd-9b47-5446ed81b0ce" SearchSteps="FuzzySelector, CV" />
-                            </scg:List>
-                          </uix:TargetAnchorable.Anchors>
-                        </uix:TargetAnchorable>
-                      </uix:NGetText.Target>
-                    </uix:NGetText>
-                    <ui:MultipleAssign DisplayName="Multiple Assign high/ low" sap:VirtualizedContainerService.HintSize="479,179" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
-                      <ui:MultipleAssign.AssignOperations>
-                        <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
-                            <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:String">[High]</OutArgument>
-                            </ui:AssignOperation.To>
-                            <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="x:String">[HighLow.Split("₹")(1).Split("/")(0)]</InArgument>
-                            </ui:AssignOperation.Value>
-                          </ui:AssignOperation>
-                          <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_2">
-                            <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:String">[Low]</OutArgument>
-                            </ui:AssignOperation.To>
-                            <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="x:String">[HighLow.Split("₹")(1).Split("/")(1)]</InArgument>
-                            </ui:AssignOperation.Value>
-                          </ui:AssignOperation>
-                        </scg:List>
-                      </ui:MultipleAssign.AssignOperations>
-                    </ui:MultipleAssign>
-                    <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CompanyName, High, Low, FaceValue}]" DataTable="[dt_new]" DisplayName="Add Data Row to output table" sap:VirtualizedContainerService.HintSize="479,209" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
-                  </Sequence>
-                </ActivityAction>
-              </ui:ForEachRow.Body>
-            </ui:ForEachRow>
-          </Sequence>
-        </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Edge" ContentHash="KEdudQuEOUq1WgrLc1oLuw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAABUQAAAVEBKaLAYAAAAkxJREFUWEftl89OE1EYxa/zr9NWE0hcQP8gOpQFUlDGoqkNFt1oVWpdgCjBhSwsDQ0QI9EYEhBiQsvCt/EVfAFfp54zTpsuPkPIzOzmJr/M7Xwn3zl3cpPeq14090IH4wrQwbXq5+SDR/v28tKu/ZhwXmmnXNY8jdQgKBgaDVY66Y2DP6M9ieJre8kLITUIAgZXb4Lc8if7i2ROpp+Y76kRmwTBD2ABp7Jtn0jm5GbZ3KFGbBKEoQCFh037VDInk2WzTY3YJAiRB/ANLiL8AH5j7m5uMBpIsEZNAoQegI3TI+PqRu0oVX96mGwMw3esUQNsEF4ADK6eq8ssbtpbe79HehKsQZMFDBF6AH5ip9iwDiRzwho0U+AqiCRAYbZufZXMCWte08sGwKDBRUQTAONSOzuKAOnkqJpYOU80X54n28PUf6ZatyqJaWqAt7OjCJBxqvra1q90T6LcSuxDM9jZUQRw8ve0lmRO3E3rGJrBzo4iQCHnam3JnCxsWKe+MA4QB4gDxAHiAJEFcDJz2rZkTu6sWSe+kE2nbj///4mINWr62vsf7CPJnORd8yM0DsD1SKnaWFE7HJvTzkAHdPkcn9d+6Lp64wv5bziJ62Qj7xrfcwvGWfau0SWc8x1rnkap1EBbMo4nFlEvGV3Q4Tw7b3xDvQbo7d1SZ8AzQLO34J3/XAVVkAE8D1wHJfAKrAPqCOd8xxo1PMhIWvakB73oSe9/12jANFwpP3cf/qY5V08dT0VszOM3P3VfxznfsUZN/wQladmTXvBU+l9+x+Q1s05rCQAAAABJRU5ErkJggg==" InformativeScreenshot="e18fa1d2b5b0bb3fba06702a77a10ac8.jpg" Reference="TL6UdnT9wUaJc1ITW54GJA/WASND6Ab5k6QMuyFo8-boQ" Selector="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" Title="Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener" Url="https://www.screener.in/company/TCS/consolidated/" Version="V1" />
-      </uix:NApplicationCard.TargetApp>
-    </uix:NApplicationCard>
-    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_new]" DisplayName="Write Range Workbook output" sap:VirtualizedContainerService.HintSize="615,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="assignments\29Nov\output\Q6_CompanyData.xlsx" />
+                          </ui:MultipleAssign.AssignOperations>
+                        </ui:MultipleAssign>
+                        <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{CompanyName, High, Low, FaceValue}]" DataTable="[dt_new]" DisplayName="Add Data Row to output table" sap:VirtualizedContainerService.HintSize="479,209" sap2010:WorkflowViewState.IdRef="AddDataRow_3" />
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:ForEachRow.Body>
+                </ui:ForEachRow>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-8, -8, 1382, 744" BrowserType="Edge" ContentHash="KEdudQuEOUq1WgrLc1oLuw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAABUQAAAVEBKaLAYAAAAkxJREFUWEftl89OE1EYxa/zr9NWE0hcQP8gOpQFUlDGoqkNFt1oVWpdgCjBhSwsDQ0QI9EYEhBiQsvCt/EVfAFfp54zTpsuPkPIzOzmJr/M7Xwn3zl3cpPeq14090IH4wrQwbXq5+SDR/v28tKu/ZhwXmmnXNY8jdQgKBgaDVY66Y2DP6M9ieJre8kLITUIAgZXb4Lc8if7i2ROpp+Y76kRmwTBD2ABp7Jtn0jm5GbZ3KFGbBKEoQCFh037VDInk2WzTY3YJAiRB/ANLiL8AH5j7m5uMBpIsEZNAoQegI3TI+PqRu0oVX96mGwMw3esUQNsEF4ADK6eq8ssbtpbe79HehKsQZMFDBF6AH5ip9iwDiRzwho0U+AqiCRAYbZufZXMCWte08sGwKDBRUQTAONSOzuKAOnkqJpYOU80X54n28PUf6ZatyqJaWqAt7OjCJBxqvra1q90T6LcSuxDM9jZUQRw8ve0lmRO3E3rGJrBzo4iQCHnam3JnCxsWKe+MA4QB4gDxAHiAJEFcDJz2rZkTu6sWSe+kE2nbj///4mINWr62vsf7CPJnORd8yM0DsD1SKnaWFE7HJvTzkAHdPkcn9d+6Lp64wv5bziJ62Qj7xrfcwvGWfau0SWc8x1rnkap1EBbMo4nFlEvGV3Q4Tw7b3xDvQbo7d1SZ8AzQLO34J3/XAVVkAE8D1wHJfAKrAPqCOd8xxo1PMhIWvakB73oSe9/12jANFwpP3cf/qY5V08dT0VszOM3P3VfxznfsUZN/wQladmTXvBU+l9+x+Q1s05rCQAAAABJRU5ErkJggg==" InformativeScreenshot="e18fa1d2b5b0bb3fba06702a77a10ac8.jpg" Reference="TL6UdnT9wUaJc1ITW54GJA/WASND6Ab5k6QMuyFo8-boQ" Selector="&lt;html app='msedge.exe' title='Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener' /&gt;" Title="Tata Consultancy Services Ltd share price | About TCS | Key Insights - Screener" Url="https://www.screener.in/company/TCS/consolidated/" Version="V1" />
+          </uix:NApplicationCard.TargetApp>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="uue:UiAutomationException" sap:VirtualizedContainerService.HintSize="619,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="uue:UiAutomationException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="uue:UiAutomationException" Name="exception" />
+            </ActivityAction.Argument>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;ERROR CATCH&quot;]" />
+          </ActivityAction>
+        </Catch>
+        <Catch x:TypeArguments="s:InvalidOperationException" sap:VirtualizedContainerService.HintSize="619,22" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:InvalidOperationException">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:InvalidOperationException" Name="exception" />
+            </ActivityAction.Argument>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+    <ui:WriteRange StartingCell="{x:Null}" WorkbookPathResource="{x:Null}" AddHeaders="True" DataTable="[dt_new]" DisplayName="Write Range Workbook output" sap:VirtualizedContainerService.HintSize="434,139" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" WorkbookPath="assignments\29Nov\output\Q6_CompanyData.xlsx" />
   </Sequence>
 </Activity>

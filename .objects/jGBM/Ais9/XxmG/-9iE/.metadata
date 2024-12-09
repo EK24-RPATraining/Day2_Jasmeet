@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Gemini Astrology",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "-9iEH-2otk6EPCTB_hmApA",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/-9iEH-2otk6EPCTB_hmApA",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/XxmGqeL5Y0abDKskOq0UCw",
+  "Created": "2024-12-05T11:05:56.5946569Z",
+  "Updated": "2024-12-05T11:05:56.5946569Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

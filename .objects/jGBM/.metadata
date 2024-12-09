@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge Virgo Horoscope  Virgo Powers, Weaknesses, Likes, Dislikes",
+  "Type": "App",
+  "Id": "jGBM_A3pn0qLuvle4KTIbQ",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/jGBM_A3pn0qLuvle4KTIbQ",
+  "Created": "2024-12-05T09:50:45.0469622Z",
+  "Updated": "2024-12-05T09:50:45.0469622Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

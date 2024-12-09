@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryScreenData ContentHash="Lk5MLnsePUaqzTXUZodrkA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryScreenData.Data>
+    <TargetApp x:Key="TargetApp" Area="-8, -8, 1382, 744" BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE7SURBVDhPYxgF1AUsQCwExJpAbALEFgzKOjYMfCJuYDYDgwYQiwCxMBCzATEcMAIxOxBLAbEf0JQCFl7+It6QlGKJ6inFYsXdxQyq+kVAuSwgTgPiQCDWB2JBIGYCYrABPEDsbWKgX7R765Zii9jU4si9F4oZlPWLdTrmFKs3TCn28vUrqSwuKlGQkS4Bqi0A4gAglgNisJPcFeVkS/7//w/Cxd7J6cWVF24X21S1Fhccv1KsmV1RvH3btmKQfENNDciABCA2A2I+IGZwUpCTi1+1fFkiUEESEGdv27w538Q/sDBqwpQim/TsYl0z8+LTR4/kTZnQHy/Ez+cE1KMAxKwgzSDA4u/ry3P29CneebNn8bU01Et3tbaoifDy6ADlDIHYTlpUxFqAmwsUsGJAzAzEYL+PAqoABgYAmwZXg3Xk1csAAAAASUVORK5CYII=" Selector="&lt;html app='msedge.exe' title='Scorpio Sign Forecast | Traits, Characteristics Horoscope' /&gt;" Title="Scorpio Sign Forecast | Traits, Characteristics Horoscope" Url="https://astrologyfutureeye.com/zodiac/scorpio-sign?sgn" Version="V1">
+      <imageRef attrName="InformativeScreenshot" originalValue="7e0f51120d75e1affdfdc06bd89b38c4.jpg" xmlns="">0muBhr6YxyU-CH9BZA9fQIA</imageRef>
+    </TargetApp>
+  </ObjectRepositoryScreenData.Data>
+</ObjectRepositoryScreenData>

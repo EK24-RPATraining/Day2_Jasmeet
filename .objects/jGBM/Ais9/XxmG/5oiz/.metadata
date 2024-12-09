@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Taurus Astrology",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "5oizQYyK50CN2SiBxHwycA",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/5oizQYyK50CN2SiBxHwycA",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/XxmGqeL5Y0abDKskOq0UCw",
+  "Created": "2024-12-09T04:53:10.4731854Z",
+  "Updated": "2024-12-09T04:53:10.4731854Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

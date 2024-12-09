@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Quotes to Scrape",
+  "Type": "Screen",
+  "Id": "eKtiA0K02Eytop4C-GANuw",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/eKtiA0K02Eytop4C-GANuw",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/EC2YE9vi1ECH1XrFB4HV7Q",
+  "Created": "2024-12-05T11:27:37.1980478Z",
+  "Updated": "2024-12-05T11:27:37.1980478Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

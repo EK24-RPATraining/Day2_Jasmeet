@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Select",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "sp4lkEDplUCoWmrPBhsY4g",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/sp4lkEDplUCoWmrPBhsY4g",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/XxmGqeL5Y0abDKskOq0UCw",
+  "Created": "2024-12-05T10:33:49.2153692Z",
+  "Updated": "2024-12-05T10:33:49.2153692Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

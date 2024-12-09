@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="eQ4Whq0fLkq7XF6CsdSM9A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="astrologyfutureeye.com/astro-calculators/sun-sign-calculator" DesignTimeRectangle="4, 395, 100, 17" DesignTimeScaleFactor="1" Guid="58bfa675-2378-4263-b03a-d10ecbf9a694" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGQAAAARCAYAAAArDQkmAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFYSURBVFhH7ZbBDcIwDAAzGyMgdQnGQDAHLxiCAeDFFDwYwxDHJnZiIgIPKuLHPZo4ruRr7AaACzjzwYXMDFvIdQvLsIKTsXc7LCCEQCxgf61jTmvej9h5dIydZ0QMITvYvChkkiGKh+J0MVOhxdnzqsqV8uS1Ku/AaCFYPP5qSyFJ1PJwFGtUzGkLt/iMggJsznk/gpLWO3q28hxhP9W5RyQLIRmxKOUXjBi3IZ+jWOM2RJQ0F9LEnCH9Qmi9JUSs28/esiLvC2m1LC5mq2WV+ehG2u1xXDqEcGHFl0wC8lpqPerss/C8RjETt7AcU4ockS4hEfW7GosqWxbGsBTiMcxVvio+gXmlpEHpFlLyTqwqNgqp43ve+c98OUPoNvAvrTlDinMvbgi+k6UNzAczJK+nOKNdicKWZ3yGtPluhpgxxQyRhRfoPC6DMYU4v8OFzAwXMisucAfzldgFhDgNLwAAAABJRU5ErkJggg==" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="0, 0, 182, 522" FullSelectorArgument="&lt;ctrl role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl role='pane' automationid='' /&gt;" Guid="6c3a733e-7dae-4529-a6ad-eb319f5511d1" SearchSteps="Selector, FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="95e2af1b022dde942af2778584c68b6f.png" xmlns="">0RQ6nx5dxM0iZvkB00NdQNg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

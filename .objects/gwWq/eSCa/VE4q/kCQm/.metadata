@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Your success rate is 10…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "kCQm8l5_P0i4RPppCsQyvA",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/kCQm8l5_P0i4RPppCsQyvA",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/VE4qdnarXUmZoeWIaLwPwg",
+  "Created": "2024-12-06T11:26:45.8553284Z",
+  "Updated": "2024-12-06T11:26:45.8553284Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

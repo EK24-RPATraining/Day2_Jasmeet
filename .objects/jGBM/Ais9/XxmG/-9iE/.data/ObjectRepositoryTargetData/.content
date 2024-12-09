@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="t05TB72oO0K8k_LZuEctdQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="astrologyfutureeye.com/zodiac/gemini-sign" DesignTimeRectangle="667, 332, 261, 31" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' /&gt;" Guid="71fbab73-8b5b-45b9-b92d-7c9f9488aadb" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Gemini Horoscope Sign | Traits &amp;amp; Characteristics Forecast' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="667, 315, 523, 16" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='CAPTION' type='' class='bold' aaname='Gemini Astrology' check:innerText='Gemini Astrology' /&gt;" Guid="f2fe8956-853d-4786-84b7-9f33828c90cf" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="8ef156c8f80b5f9d097fd5cabf5b59d4.png" xmlns="">0S1eZXLXprkCb9lCNRx7mZQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

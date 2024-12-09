@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Virgo Horoscope  Virgo Powers, Weaknesse",
+  "Type": "Screen",
+  "Id": "RfzmkTUQvEO-51EJhmJTYw",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/RfzmkTUQvEO-51EJhmJTYw",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/Ais9CwT6ZUe2cBaTp3-0Tg",
+  "Created": "2024-12-05T09:50:45.0837273Z",
+  "Updated": "2024-12-05T09:50:45.0837273Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

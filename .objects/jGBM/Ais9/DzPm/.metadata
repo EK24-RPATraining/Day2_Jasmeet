@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge Scorpio Sign Forecast  Traits, Character",
+  "Type": "Screen",
+  "Id": "DzPmTed-zEevfKUm0nb-DQ",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/DzPmTed-zEevfKUm0nb-DQ",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/Ais9CwT6ZUe2cBaTp3-0Tg",
+  "Created": "2024-12-05T11:14:01.8714455Z",
+  "Updated": "2024-12-05T11:14:01.8714455Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

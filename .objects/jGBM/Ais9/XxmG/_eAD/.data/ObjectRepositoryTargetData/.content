@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YZQg_mQnV0GLNArQ7FCAlQ" Reference="TL6UdnT9wUaJc1ITW54GJA/_eADrC6lD0CaDIcHEuAIjA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="astrologyfutureeye.com/astro-calculators/sun-sign-calculator" DesignTimeRectangle="0, 0, 182, 522" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl role='pane' /&gt;" FuzzySelectorArgument="&lt;ctrl role='pane' automationid='' /&gt;" Guid="8a71982a-190c-47dd-93c1-0fa27bffb308" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="9ca0d7967b1fad7d4f613de5edf97efc.png" xmlns="">0gEBX78sZAkC_bu7Qp-mLsA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

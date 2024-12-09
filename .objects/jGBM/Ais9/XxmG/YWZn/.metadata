@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Element 'msedge.exe'",
+  "Type": "Element",
+  "Id": "YWZn7Ypx-kiLJwxRP292jA",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/YWZn7Ypx-kiLJwxRP292jA",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/XxmGqeL5Y0abDKskOq0UCw",
+  "Created": "2024-12-05T10:13:52.835302Z",
+  "Updated": "2024-12-05T10:13:52.835302Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

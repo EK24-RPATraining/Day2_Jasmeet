@@ -1,0 +1,14 @@
+﻿{
+  "Name": "2002",
+  "Type": "Element",
+  "TaxonomyType": "Dropdown",
+  "Id": "2DqmsQ6zikOEykkDxcOJWw",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/2DqmsQ6zikOEykkDxcOJWw",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/XxmGqeL5Y0abDKskOq0UCw",
+  "Created": "2024-12-05T10:17:40.5015555Z",
+  "Updated": "2024-12-05T10:17:40.5015555Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

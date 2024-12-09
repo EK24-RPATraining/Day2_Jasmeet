@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="1gzCXO4FSEuURkvGygxp4g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="astrologyfutureeye.com/astro-calculators/sun-sign-calculator" DesignTimeRectangle="407, 518, 182, 32" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;webctrl id='day' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='day' tag='SELECT' type='' class='input w28' aaname='' /&gt;" Guid="0ee7df1d-2db8-4b5a-8c75-8ca2f7d3ce15" ImageBase64="" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Sun Sign Calculator | Western Zodiac Sign Calculator' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f30d880994a323e97158e3c7de23a467.png" xmlns="">0HnYMudU81U-z5hAN3m90uA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">SelectItem</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

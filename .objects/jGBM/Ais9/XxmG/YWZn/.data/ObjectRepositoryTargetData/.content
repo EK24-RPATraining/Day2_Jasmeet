@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="sBRy5YFBZkSqEp8NSOfIXA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="astrologyfutureeye.com/astro-calculators/sun-sign-calculator" DesignTimeRectangle="2, 473, 163, 25" DesignTimeScaleFactor="1" Guid="1a2a8a8d-4381-4e26-95d9-3bae1a5badea" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKMAAAAZCAYAAABdPZ6TAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADtSURBVHhe7djBEUNQEIDhV5sSMqMJBSjAUIeTFJECOKUKB2VsEsMEebxlMuzhP3yXZ8fpHxYn8hTAAmKEGZ4YH1LFTpz7ypsjM8A+ixiHyOJCuvGsSRaxaWaA/eYxtoXcXCRVOzl7q7NJfJoZ4ADVztjdo2BomhlgiyLG4bWclZ5rI80MsC0co2YfZGfEH2zH2O+HgSeeZgZQWI+REHEyf4yEiAv8xkiIuMgixlLyYGSaGWC/WYz9v8JPaF6J1MqZ6T0BrfUPGOBkxAgziBFmECPMIEaYQYwwgxhhBjHCDJemqQAWECPMIEYYkcoLn5sEgSxAh08AAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="edb0a3361f4bbc3a81bc3f009f219978.png" xmlns="">08UItCMU2YUqdRv4rIw0gKA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

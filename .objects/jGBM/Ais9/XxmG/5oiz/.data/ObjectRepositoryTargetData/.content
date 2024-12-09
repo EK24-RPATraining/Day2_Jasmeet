@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="IyMwOJ871kSgCYpp1dXtFw" Reference="TL6UdnT9wUaJc1ITW54GJA/5oizQYyK50CN2SiBxHwycA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="astrologyfutureeye.com/zodiac/cancer-sign" CVScreenId="4cefaa97-61b0-4622-bbf3-a752228e809c" CvTextArea="869, 265, 118, 16" CvTextArgument="Cancer Astrology" CvType="Text" DesignTimeRectangle="667, 264, 523, 16" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='CAPTION' aaname='* Astrology' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='CAPTION' aaname='* Astrology' type='' class='bold' check:text='Astrology' /&gt;" Guid="39ca02b1-b2b2-47b9-b4e3-09758d2e3520" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Cancer Horoscope Sign Prediction | Likes &amp;amp; Dislikes of Cancer' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="b53168b9df4b5a40bb29c0c3251a587b.png" xmlns="">0C36qE7c9I0KJoEPsBGwnLw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

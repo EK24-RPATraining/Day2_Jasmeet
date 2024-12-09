@@ -1,0 +1,13 @@
+﻿{
+  "Name": "pane(1)",
+  "Type": "Element",
+  "Id": "-1rKSGUafke9ZB4v69DiAg",
+  "Reference": "TL6UdnT9wUaJc1ITW54GJA/-1rKSGUafke9ZB4v69DiAg",
+  "ParentRef": "TL6UdnT9wUaJc1ITW54GJA/XxmGqeL5Y0abDKskOq0UCw",
+  "Created": "2024-12-05T10:19:36.9050887Z",
+  "Updated": "2024-12-05T10:19:36.9050887Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.6.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

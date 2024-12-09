@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="uskIYjCfrkSV-aJp7hyVug" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="astrologyfutureeye.com/astro-calculators/sun-sign-calculator" DesignTimeRectangle="4, 267, 146, 22" DesignTimeScaleFactor="1" Guid="1cf61bcd-90df-4577-ad19-b4e386e9a338" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAJIAAAAWCAYAAAArWsVAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAHOSURBVGhD7ZnBjcIwEEVTGyUg0QRlIKiDU1IEBZATVXCgDK9jj8PMZEJiy5vd1f7DE4T8TILmMbZE49zDSa7u3DSu4ZyuKrOOV7dz594+Z/K8uL2/X9Y14FcgReqPQZx9d2Ohm2sPg1BHd+fZJUqkgEh/lrdIC028n7xMh4t7GedMINK/YhRpURSzyXoZpKlFk22ELY3DcsfPiemX7tHF15SxxArPO2Z2rn2y88P9/XdpUybnBwCKIJHi8iWXNI3KUNP5NVESkskQLzafNV3XoGORISmnddhSqzNJ5MK9HciHRIqTZY1IqTlBmk+/dC2SIdaAJZ9+DjEtZ+qITBBJTSnwrRSKJKUy0Q2fay7PhfdGJlwbZRPizWTEe7AJhUvbirwpktHcIpG8xCYQ6aco3GzXnkj0+YxIfArNTiQORNqcUaRJ4xVatDzxjGPC2iPpzJr9T6gjMhBpS94iDYQG6CWLpo9uDDVdZHmTDSmCEFwCXYOORYaeaVqHPY++F0TaHClSIOcvEp2VkyI23JMmhUfvccT0CUL4Gn0SakDWTIy1rToQaXMMkQDIByKBKkAkUAWIBKoAkUAVIBKoAkQCVYBIoAoQCVQBIoEKPNwXew6sKbjNpJkAAAAASUVORK5CYII=" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' idx='*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="4801d8eb1e6d4a14a9b9b888e87030dd.png" xmlns="">078mEzFoG7kudXd00-I1-YA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

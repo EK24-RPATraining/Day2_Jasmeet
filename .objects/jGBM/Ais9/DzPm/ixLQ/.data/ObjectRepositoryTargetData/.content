@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="MDQ-GOw8RUS_NRgU0bSs8g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="astrologyfutureeye.com/zodiac/scorpio-sign" DesignTimeRectangle="667, 583, 261, 31" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' /&gt;" Guid="2310be09-4b1d-4dac-b2c8-b741fc8f2e01" ScopeSelectorArgument="&lt;html app='msedge.exe' title='Scorpio Sign Forecast | Traits, Characteristics Horoscope' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="667, 566, 523, 16" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tag='CAPTION' type='' class='bold' aaname='Scorpio Astrology' check:innerText='Scorpio Astrology' /&gt;" Guid="67ae7a17-bc06-43bb-ad67-d52430cdec74" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6c804ee1a06e6e6d55e2dcfb92a54217.png" xmlns="">01Fp-DcpeS0OLZOm37RAo5Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
